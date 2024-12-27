@@ -1,6 +1,9 @@
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
-import App from './app/app';
+import { AppThemeProvider } from './app/AppThemeProvider';
+import { App } from './app/App';
+
+import './main.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -8,6 +11,8 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <StrictMode>
-    <App />
+    <AppThemeProvider>
+      <App />
+    </AppThemeProvider>
   </StrictMode>
 );

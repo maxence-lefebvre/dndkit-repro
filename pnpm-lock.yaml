@@ -5,12 +5,21 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@dnd-kit/react':
+    specifier: 0.0.6-beta-20241204184550
+    version: 0.0.6-beta-20241204184550(react-dom@18.3.1)(react@18.3.1)
   '@emotion/react':
     specifier: 11.11.1
     version: 11.11.1(@types/react@18.3.1)(react@18.3.1)
   '@emotion/styled':
     specifier: 11.11.0
     version: 11.11.0(@emotion/react@11.11.1)(@types/react@18.3.1)(react@18.3.1)
+  '@radix-ui/colors':
+    specifier: 3.0.0
+    version: 3.0.0
+  clsx:
+    specifier: ^2.1.1
+    version: 2.1.1
   react:
     specifier: 18.3.1
     version: 18.3.1
@@ -1358,6 +1367,60 @@ packages:
       '@jridgewell/trace-mapping': 0.3.9
     dev: true
 
+  /@dnd-kit/abstract@0.0.6-beta-20241204184550:
+    resolution: {integrity: sha512-dtD0ys0eROAdhKdDzGzbDTDSXdhC05bd0OkMhGli96XIQGXdiT0inrnb+FKw9P/k9wclojjrbopA48m0rdw21w==}
+    dependencies:
+      '@dnd-kit/geometry': 0.0.6-beta-20241204184550
+      '@dnd-kit/state': 0.0.6-beta-20241204184550
+      tslib: 2.8.1
+    dev: false
+
+  /@dnd-kit/collision@0.0.6-beta-20241204184550:
+    resolution: {integrity: sha512-vwL12znvWmTNcmPfW1egB42iVO8pwmuPyO4OPuoSLBdrktDuTXeORWO/auFVygnVznNujTxMdPczAGVwBnEimQ==}
+    dependencies:
+      '@dnd-kit/abstract': 0.0.6-beta-20241204184550
+      '@dnd-kit/geometry': 0.0.6-beta-20241204184550
+      tslib: 2.8.1
+    dev: false
+
+  /@dnd-kit/dom@0.0.6-beta-20241204184550:
+    resolution: {integrity: sha512-BXX0KLBimjdTmJqpkdznH9A37V0GHTSemSc4BigLmtsxst/oELKwVfaRGT/whOyPJt3yv8pIAavhtEdj0V2o6g==}
+    dependencies:
+      '@dnd-kit/abstract': 0.0.6-beta-20241204184550
+      '@dnd-kit/collision': 0.0.6-beta-20241204184550
+      '@dnd-kit/geometry': 0.0.6-beta-20241204184550
+      '@dnd-kit/state': 0.0.6-beta-20241204184550
+      tslib: 2.8.1
+    dev: false
+
+  /@dnd-kit/geometry@0.0.6-beta-20241204184550:
+    resolution: {integrity: sha512-TfkeKjmnB7bpg5H4CHQYSCv4XR6CQ6yhFPZTgPJZtCPS9yA04x5CNqHT1jpiYphox2/QcXYHsplbrNE4bJ7Yig==}
+    dependencies:
+      '@dnd-kit/state': 0.0.6-beta-20241204184550
+      tslib: 2.8.1
+    dev: false
+
+  /@dnd-kit/react@0.0.6-beta-20241204184550(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-EqlV77Ve01EHXoJ6tKrfupbtQ+uNKwezMfTbGqfQXfslLCiLD+1HNnaupwas8PkKmup+hF7ukyD+lpNMkZtg2w==}
+    peerDependencies:
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    dependencies:
+      '@dnd-kit/abstract': 0.0.6-beta-20241204184550
+      '@dnd-kit/dom': 0.0.6-beta-20241204184550
+      '@dnd-kit/state': 0.0.6-beta-20241204184550
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      tslib: 2.8.1
+    dev: false
+
+  /@dnd-kit/state@0.0.6-beta-20241204184550:
+    resolution: {integrity: sha512-9nYxpK2TKLHvZcb2qga0Y5obZtBLthx6T+R1r5CN/zk+Qwi9qadElBxSAMfruParyKjtujfWOpRQSwsTSzpPdw==}
+    dependencies:
+      '@preact/signals-core': 1.8.0
+      tslib: 2.8.1
+    dev: false
+
   /@emnapi/core@1.3.1:
     resolution: {integrity: sha512-pVGjBIt1Y6gg3EJN8jTcfpP/+uuRksIo055oE/OBkDNcjZqVbfkWCksG1Jp4yZnj3iKWyWX8fdG/j6UDYPbFog==}
     dependencies:
@@ -2696,6 +2759,14 @@ packages:
   /@polka/url@1.0.0-next.28:
     resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
     dev: true
+
+  /@preact/signals-core@1.8.0:
+    resolution: {integrity: sha512-OBvUsRZqNmjzCZXWLxkZfhcgT+Fk8DDcT/8vD6a1xhDemodyy87UJRJfASMuSD8FaAIeGgGm85ydXhm7lr4fyA==}
+    dev: false
+
+  /@radix-ui/colors@3.0.0:
+    resolution: {integrity: sha512-FUOsGBkHrYJwCSEtWRCIfQbZG7q1e6DgxCIOe1SUQzDe/7rXXeA47s8yCn6fuTNQAj1Zq4oTFi9Yjp3wzElcxg==}
+    dev: false
 
   /@rollup/rollup-android-arm-eabi@4.29.1:
     resolution: {integrity: sha512-ssKhA8RNltTZLpG6/QNkCSge+7mBQGUqJRisZ2MDQcEGaK93QESEgWK2iOpIDZ7k9zPVkG5AS3ksvD5ZWxmItw==}
@@ -4505,6 +4576,11 @@ packages:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
     dev: true
+
+  /clsx@2.1.1:
+    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
+    engines: {node: '>=6'}
+    dev: false
 
   /co@4.6.0:
     resolution: {integrity: sha512-QVb0dM5HvG+uaxitm8wONl7jltx8dqhfU33DcqtOZcLSVIKSDDLDi7+0LbAKiyI8hD9u42m2YxXSkMGWThaecQ==}
@@ -8777,7 +8853,6 @@ packages:
 
   /tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
-    dev: true
 
   /tsscmp@1.0.6:
     resolution: {integrity: sha512-LxhtAkPDTkVCMQjt2h6eBVY28KCjikZqZfMcC15YBeNjkgUpdCfBu5HoiOTDu86v6smE8yOjyEktJ8hlbANHQA==}
