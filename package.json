@@ -10,7 +10,7 @@
   },
   "private": true,
   "dependencies": {
-    "@dnd-kit/react": "0.0.6-beta-20241204184550",
+    "@dnd-kit/react": "0.0.6",
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
     "@radix-ui/colors": "3.0.0",
